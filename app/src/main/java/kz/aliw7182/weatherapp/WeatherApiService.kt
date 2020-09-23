@@ -2,7 +2,8 @@ package kz.aliw7182.weatherapp
 
 import io.reactivex.Observable
 import io.reactivex.Single
-import kz.aliw7182.weatherapp.models.main
+import kz.aliw7182.weatherapp.models.CityWeather
+import kz.aliw7182.weatherapp.models.Weather
 import kz.aliw7182.weatherapp.models.weather
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -32,7 +33,7 @@ interface WeatherApiService {
         @Query("q") city:String,
         @Query("units") unit:String,
         @Query("appid") key:String
-    ):Single<main>
+    ):Single<Weather>
 
 
 

@@ -28,7 +28,10 @@ private fun getData(){
         .observeOn(AndroidSchedulers.mainThread())
         .subscribe(
             {
-                result_view.text =it.toString()
+
+                Log.d("tag","it")
+                result_view.text =it.list.first().main.temp.toString()
+
             },
             {
                 Log.e("ERROR",it.message.toString())

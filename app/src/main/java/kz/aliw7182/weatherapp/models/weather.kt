@@ -1,8 +1,8 @@
 package kz.aliw7182.weatherapp.models
 
+import java.io.Serializable
+
 data class weather(
-    val temp: String,
-    val humidity: String,
-    val feels_like: String
+    val description: String
 
 )
